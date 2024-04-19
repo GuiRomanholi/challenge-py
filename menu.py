@@ -46,6 +46,7 @@ while executando:
             break
     elif opcao == 3:
         print(frase,"Quem Somos!")
+        print("Somos:\nGuilherme R\nIgor\nCristia\nE iremos mudar o mundo!!")
         print("---------------------------------------------")
         print("Gostaria de voltar ao menu? (S/N)")
         voltar = input().upper()
