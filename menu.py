@@ -72,41 +72,74 @@ while executando:
                 print("Até Breve!")
                 break
     elif opcao == "C":
-        print(frase,"ChatBot!")
-        menu_chat ="""
-        --------------------------------
-        M E N U - D E - P R O B L E M A S \n
-        - (S)uperaquecimento
-        - Pane (E)létrica
-        - (B)ateria
-        - (F)alta de Combustível
-        - Carro (T)repidando
-        - (P)neus Furados
-        - Correia (D)entada
-        - Problemas no (C)âmbio
-        --------------------------------
-        """
-        print(menu_chat)
-        problema = input("Por favor me informe o problema no seu carro: ").upper()
-        if problema == "S":
-            print("É provável que o problema seja Superaquecimento")
-        elif problema == "E":
-            print("É provável que seja um problema Elétrico")
-        elif problema == "B":
-            print("É provável que o problema seja Bateria ruim")
-        elif problema == "F":
-            print("É provável que o problema seja Falta de Combustível")
-        elif problema == "T":
-            print("É provável que o problema seja Carro Trepidando")
-        elif problema == "P":
-            print("É provável que o problema seja Pneus Furados")
-        elif problema == "D":
-            print("É provável que o problema seja Correia Dentada")
-        elif problema == "C":
-            print("É provável que o problema seja Problemas no Câmbio")
-        else:
-            print("Valor inválido, por favor digitar o que está entre ().")
-
+        executando_chat = True
+        while executando_chat:
+            print(frase,"ChatBot!")
+            menu_chat ="""
+            --------------------------------
+            M E N U - D E - P R O B L E M A S \n
+            - (S)uperaquecimento
+            - Pane (E)létrica
+            - (B)ateria
+            - (F)alta de Combustível
+            - Carro (T)repidando
+            - (P)neus Furados
+            - Correia (D)entada
+            - Problemas no (C)âmbio
+            --------------------------------
+            """
+            print(menu_chat)
+            problema = input("Por favor me informe o problema no seu carro: ").upper()
+            if problema == "S":
+                print("Se o carro estiver superaquecendo, pare imediatamente, desligue o motor e deixe esfriar.\nVerifique o nível do líquido de arrefecimento e procure por vazamentos.")
+                print("Gostaria de voltar ao menu de problemas? (S/N)")
+                voltar = input().upper()
+                if voltar == "N":
+                    break
+            elif problema == "E":
+                print("Em caso de pane elétrica no carro, verifique os fusíveis e conexões elétricas.\nSe necessário, chame um eletricista automotivo qualificado para diagnosticar e corrigir o problema.")
+                print("Gostaria de voltar ao menu de problemas? (S/N)")
+                voltar = input().upper()
+                if voltar == "N":
+                    break
+            elif problema == "B":
+                print("Se a bateria do carro estiver ruim, tente dar uma carga com cabos auxiliares ou um carregador portátil.\nSe não resolver, substitua por uma nova ou chame um serviço de assistência para fazer isso.")
+                print("Gostaria de voltar ao menu de problemas? (S/N)")
+                voltar = input().upper()
+                if voltar == "N":
+                    break
+            elif problema == "F":
+                print("Se estiver sem combustível, pare o carro em local seguro.\nSe possível, peça ajuda para trazer combustível. Se não, chame um serviço de assistência para reabastecer ou providenciar uma solução.")
+                print("Gostaria de voltar ao menu de problemas? (S/N)")
+                voltar = input().upper()
+                if voltar == "N":
+                    break
+            elif problema == "T":
+                print("Se o carro estiver trepidando, verifique as rodas quanto a danos ou desequilíbrio.\nSe necessário, ajuste a pressão dos pneus.\nSe o problema persistir, pode ser necessário verificar os freios ou a suspensão com um mecânico.")
+                print("Gostaria de voltar ao menu de problemas? (S/N)")
+                voltar = input().upper()
+                if voltar == "N":
+                    break
+            elif problema == "P":
+                print("Se tiver um pneu furado, estacione em local seguro.\nTroque o pneu utilizando o macaco e a chave de roda, ou chame um serviço de assistência para trocar o pneu por você.")
+                print("Gostaria de voltar ao menu de problemas? (S/N)")
+                voltar = input().upper()
+                if voltar == "N":
+                    break
+            elif problema == "D":
+                print("Se a correia dentada quebrar, pare o carro imediatamente para evitar danos ao motor.\nChame um serviço de reboque para levar o veículo a uma oficina mecânica para substituir a correia e verificar se há danos adicionais no motor.")
+                print("Gostaria de voltar ao menu de problemas? (S/N)")
+                voltar = input().upper()
+                if voltar == "N":
+                    break
+            elif problema == "C":
+                print("Se enfrentar problemas de câmbio, estacione com segurança.\nVerifique o nível de fluido de transmissão e procure sinais de vazamento.\nSe persistir, consulte um mecânico qualificado para diagnosticar e reparar o câmbio.")
+                print("Gostaria de voltar ao menu de problemas? (S/N)")
+                voltar = input().upper()
+                if voltar == "N":
+                    break
+            else:
+                print("Valor inválido, por favor digitar o que está entre ().")
         print("---------------------------------------------")
         print("Gostaria de voltar ao menu? (S/N)")
         voltar = input().upper()
