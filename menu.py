@@ -86,58 +86,77 @@ while executando:
             - (P)neus Furados
             - Correia (D)entada
             - Problemas no (C)âmbio
+            - (V)oltar
             --------------------------------
             """
             print(menu_chat)
             problema = input("Por favor me informe o problema no seu carro: ").upper()
             if problema == "S":
+                print("-----------------------------------------------")
                 print("Se o carro estiver superaquecendo, pare imediatamente, desligue o motor e deixe esfriar.\nVerifique o nível do líquido de arrefecimento e procure por vazamentos.")
+                print("-----------------------------------------------")
                 print("Gostaria de voltar ao menu de problemas? (S/N)")
                 voltar = input().upper()
                 if voltar == "N":
                     break
             elif problema == "E":
+                print("-----------------------------------------------")
                 print("Em caso de pane elétrica no carro, verifique os fusíveis e conexões elétricas.\nSe necessário, chame um eletricista automotivo qualificado para diagnosticar e corrigir o problema.")
+                print("-----------------------------------------------")
                 print("Gostaria de voltar ao menu de problemas? (S/N)")
                 voltar = input().upper()
                 if voltar == "N":
                     break
             elif problema == "B":
+                print("-----------------------------------------------")
                 print("Se a bateria do carro estiver ruim, tente dar uma carga com cabos auxiliares ou um carregador portátil.\nSe não resolver, substitua por uma nova ou chame um serviço de assistência para fazer isso.")
+                print("-----------------------------------------------")
                 print("Gostaria de voltar ao menu de problemas? (S/N)")
                 voltar = input().upper()
                 if voltar == "N":
                     break
             elif problema == "F":
+                print("-----------------------------------------------")
                 print("Se estiver sem combustível, pare o carro em local seguro.\nSe possível, peça ajuda para trazer combustível. Se não, chame um serviço de assistência para reabastecer ou providenciar uma solução.")
+                print("-----------------------------------------------")
                 print("Gostaria de voltar ao menu de problemas? (S/N)")
                 voltar = input().upper()
                 if voltar == "N":
                     break
             elif problema == "T":
+                print("-----------------------------------------------")
                 print("Se o carro estiver trepidando, verifique as rodas quanto a danos ou desequilíbrio.\nSe necessário, ajuste a pressão dos pneus.\nSe o problema persistir, pode ser necessário verificar os freios ou a suspensão com um mecânico.")
+                print("-----------------------------------------------")
                 print("Gostaria de voltar ao menu de problemas? (S/N)")
                 voltar = input().upper()
                 if voltar == "N":
                     break
             elif problema == "P":
+                print("-----------------------------------------------")
                 print("Se tiver um pneu furado, estacione em local seguro.\nTroque o pneu utilizando o macaco e a chave de roda, ou chame um serviço de assistência para trocar o pneu por você.")
+                print("-----------------------------------------------")
                 print("Gostaria de voltar ao menu de problemas? (S/N)")
                 voltar = input().upper()
                 if voltar == "N":
                     break
             elif problema == "D":
+                print("-----------------------------------------------")
                 print("Se a correia dentada quebrar, pare o carro imediatamente para evitar danos ao motor.\nChame um serviço de reboque para levar o veículo a uma oficina mecânica para substituir a correia e verificar se há danos adicionais no motor.")
+                print("-----------------------------------------------")
                 print("Gostaria de voltar ao menu de problemas? (S/N)")
                 voltar = input().upper()
                 if voltar == "N":
                     break
             elif problema == "C":
+                print("-----------------------------------------------")
                 print("Se enfrentar problemas de câmbio, estacione com segurança.\nVerifique o nível de fluido de transmissão e procure sinais de vazamento.\nSe persistir, consulte um mecânico qualificado para diagnosticar e reparar o câmbio.")
+                print("-----------------------------------------------")
                 print("Gostaria de voltar ao menu de problemas? (S/N)")
                 voltar = input().upper()
                 if voltar == "N":
                     break
+            elif problema =="V":
+                break
             else:
                 print("Valor inválido, por favor digitar o que está entre ().")
         print("---------------------------------------------")
