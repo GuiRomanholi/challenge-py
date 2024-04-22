@@ -1,5 +1,5 @@
 print("Inicio do programa")
-
+# Iniciando programa
 executando = True
 while executando:
     menu = """
@@ -13,6 +13,7 @@ while executando:
     - (S)air
     --------------------------------
     """
+    # Criando o menu ultilizando laços e if e else
     print(menu)
     opcao = input("Digite a letra entre () da opcão desejada: ").upper()
     frase = "Bem-vindo ao "
@@ -75,6 +76,7 @@ while executando:
         executando_chat = True
         while executando_chat:
             print(frase,"ChatBot!")
+            # Segundo menu de chatbot criado
             menu_chat ="""
             --------------------------------
             M E N U - D E - P R O B L E M A S \n
@@ -170,7 +172,6 @@ while executando:
         executando = False
     else:
         print("Opção Inválida, digite um dos números do Menu.")
-
-
+# Finalizando programa
 print("Fim do Programa!")
 
