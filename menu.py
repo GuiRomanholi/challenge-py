@@ -5,8 +5,8 @@ while executando:
     menu = """
     --------------------------------
     M E N U - P R I N C I P A L \n
-    - Cadastrar (U)suario
-    - Cadastrar (M)ecânico
+    - (U)suario Cadastrar
+    - (M)ecânico Cadastrar
     - (Q)uem Somos
     - (H)elp
     - (C)hatBot
@@ -15,7 +15,7 @@ while executando:
     """
     # Criando o menu ultilizando laços e if e else
     print(menu)
-    opcao = input("Digite a letra entre () da opcão desejada: ").upper()
+    opcao = input("Digite a letra entre () da opcão desejada: ").upper()[0]
     frase = "Bem-vindo ao "
     if opcao == "U":
         dic ={}
@@ -28,8 +28,8 @@ while executando:
         print("Arquivos:",dic)
         print("---------------------------------------------")
         print("Gostaria de voltar ao menu? (S/N)")
-        voltar = input().upper()
-        if voltar == "N":
+        voltar_usu = input().upper()[0]
+        if voltar_usu == "N":
             print("Até Breve!")
             break
     elif opcao == "M":
@@ -41,8 +41,8 @@ while executando:
         print(f"Bem vindo {nome_mec}, seu sálario mensal será de R$ {salario_mec}")
         print("---------------------------------------------")
         print("Gostaria de voltar ao menu? (S/N)")
-        voltar = input().upper()
-        if voltar == "N":
+        voltar_mec = input().upper()[0]
+        if voltar_mec == "N":
             print("Até Breve!")
             break
     elif opcao == "Q":
@@ -50,8 +50,8 @@ while executando:
         print("Somos:\nGuilherme R\nIgor\nCristian\nE iremos mudar o mundo!!")
         print("---------------------------------------------")
         print("Gostaria de voltar ao menu? (S/N)")
-        voltar = input().upper()
-        if voltar == "N":
+        voltar_quem = input().upper()[0]
+        if voltar_quem == "N":
             print("Até Breve!")
             break
     elif opcao == "H":
@@ -61,15 +61,15 @@ while executando:
         if pergunta == "S":
             print("Tente atualizar a página ou ligue para nossos serviços humanos, tel: (11) 3687-3779")
             print("Gostaria de voltar ao menu? (S/N)")
-            voltar = input().upper()
-            if voltar == "N":
+            voltar_help = input().upper()[0]
+            if voltar_help == "N":
                 print("Até Breve!")
                 break
         else:
             print("---------------------------------------------")
             print("Gostaria de voltar ao menu? (S/N)")
-            voltar = input().upper()
-            if voltar == "N":
+            voltar_vol = input().upper()[0]
+            if voltar_vol == "N":
                 print("Até Breve!")
                 break
     elif opcao == "C":
