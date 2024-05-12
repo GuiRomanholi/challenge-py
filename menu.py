@@ -189,7 +189,7 @@ def funcao_menu_problemas():
             executando_chat = p_dentada()
         elif problema == "C":
             executando_chat = p_cambio()
-        elif problema =="V":
+        elif problema == "V":
             break
         else:
             print("Valor inválido, por favor digitar o que está entre ().")
