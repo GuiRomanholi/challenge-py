@@ -1,5 +1,7 @@
 print("Inicio do programa")
-lista = []
+
+lista_usuario = []
+lista_mecanico = []
 
 
 def menu():
@@ -8,6 +10,8 @@ def menu():
     M E N U - P R I N C I P A L \n
     - (U)suario Cadastrar
     - (M)ecânico Cadastrar
+    - (L)istar Usuarios Cadastrados
+    - L(I)star Mecanicos Cadastrados
     - (Q)uem Somos
     - (H)elp
     - (C)hatBot
@@ -195,6 +199,25 @@ def funcao_menu_problemas():
             print("Valor inválido, por favor digitar o que está entre ().")
 
 
+def listar_usu(lista_usuario):
+    indice = 0
+    while indice < len(lista_usuario):
+        print(lista_usuario[indice])
+        print("-"*50)
+        indice = indice + 1
+    print("Aperte <ENTER> para continuar")
+    input()
+
+
+def listar_mec(lista_mecanico):
+    indice = 0
+    while indice < len(lista_mecanico):
+        print(lista_mecanico[indice])
+        print("-"*50)
+        indice = indice + 1
+    print("Aperte <ENTER> para continuar")
+    input()
+
 
 # Iniciando programa
 executando = True
@@ -204,11 +227,15 @@ while executando:
     # Criando o menu ultilizando laços e if e else
     opcao = input("Digite a letra entre () da opcão desejada: ").upper()[0]
     if opcao == "U":
-        cadastro_usuario()
+        lista_usuario.append(cadastro_usuario())
         executando = continuar()
     elif opcao == "M":
-        cadastro_mecanico()
+        lista_mecanico.append(cadastro_mecanico())
         executando = continuar()
+    elif opcao == "L":
+        listar_usu(lista_usuario)
+    elif opcao == "I":
+        listar_mec(lista_mecanico)
     elif opcao == "Q":
         quem_somos()
         executando = continuar()
