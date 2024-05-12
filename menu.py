@@ -166,6 +166,34 @@ def invalido():
     input()
 
 
+def funcao_menu_problemas():
+    executando_chat = True
+    while executando_chat:
+        print(frase,"ChatBot!")
+        # Segundo menu de chatbot criado
+        print(menu_chat())
+        problema = input("Por favor me informe o problema no seu carro: ").upper()
+        if problema == "S":
+            executando_chat = p_superaquecimento()
+        elif problema == "E":
+            executando_chat = p_eletrico()
+        elif problema == "B":
+            executando_chat = p_bateria()
+        elif problema == "F":
+            executando_chat = p_falt_compus()
+        elif problema == "T":
+            executando_chat = p_trepidando()
+        elif problema == "P":
+            executando_chat = p_pneu()
+        elif problema == "D":
+            executando_chat = p_dentada()
+        elif problema == "C":
+            executando_chat = p_cambio()
+        elif problema =="V":
+            break
+        else:
+            print("Valor inválido, por favor digitar o que está entre ().")
+
 
 
 # Iniciando programa
@@ -187,32 +215,7 @@ while executando:
     elif opcao == "H":
             executando = help()
     elif opcao == "C":
-        executando_chat = True
-        while executando_chat:
-            print(frase,"ChatBot!")
-            # Segundo menu de chatbot criado
-            print(menu_chat())
-            problema = input("Por favor me informe o problema no seu carro: ").upper()
-            if problema == "S":
-                executando_chat = p_superaquecimento()
-            elif problema == "E":
-                executando_chat = p_eletrico()
-            elif problema == "B":
-                executando_chat = p_bateria()
-            elif problema == "F":
-                executando_chat = p_falt_compus()
-            elif problema == "T":
-                executando_chat = p_trepidando()
-            elif problema == "P":
-                executando_chat = p_pneu()
-            elif problema == "D":
-                executando_chat = p_dentada()
-            elif problema == "C":
-                executando_chat = p_cambio()
-            elif problema =="V":
-                break
-            else:
-                print("Valor inválido, por favor digitar o que está entre ().")
+        funcao_menu_problemas()
         executando = continuar()
     elif opcao == "S":
         executando = sair()
