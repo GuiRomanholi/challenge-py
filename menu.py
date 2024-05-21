@@ -93,69 +93,75 @@ def menu_chat():
 
 
 def continuar_problemas():
-    print("-"*50)
-    print("Gostaria de voltar ao menu de problemas? (S/N)")
-    voltar = input().upper()
-    if voltar == "N":
-        executando_chat = False
-    elif voltar == "S":
-        executando_chat = True
+    e = True
+    while e == True:
+        print("-"*50)
+        print("Gostaria de voltar ao menu de problemas? (S/N)")
+        voltar = input().upper()
+        if voltar == "N":
+            executando_chat = False
+            e = False
+        elif voltar == "S":
+            executando_chat = True
+            e = False
+        else:
+            print("Por Favor digite (S) para Sim e (N) para não")
     return executando_chat
 
 
 def p_superaquecimento():
     print("-----------------------------------------------")
     print("Se o carro estiver superaquecendo, pare imediatamente, desligue o motor e deixe esfriar.\nVerifique o nível do líquido de arrefecimento e procure por vazamentos.")
-    print("-----------------------------------------------")
+    print("--------------------------------------------------")
     return continuar_problemas()
 
 
 def p_eletrico():
     print("-----------------------------------------------")
     print("Em caso de pane elétrica no carro, verifique os fusíveis e conexões elétricas.\nSe necessário, chame um eletricista automotivo qualificado para diagnosticar e corrigir o problema.")
-    print("-----------------------------------------------")
+    print("--------------------------------------------------")
     return continuar_problemas()
 
 
 def p_bateria():
     print("-----------------------------------------------")
     print("Se a bateria do carro estiver ruim, tente dar uma carga com cabos auxiliares ou um carregador portátil.\nSe não resolver, substitua por uma nova ou chame um serviço de assistência para fazer isso.")
-    print("-----------------------------------------------")
+    print("--------------------------------------------------")
     return continuar_problemas()
 
 
 def p_falt_compus():
     print("-----------------------------------------------")
     print("Se estiver sem combustível, pare o carro em local seguro.\nSe possível, peça ajuda para trazer combustível. Se não, chame um serviço de assistência para reabastecer ou providenciar uma solução.")
-    print("-----------------------------------------------")
+    print("--------------------------------------------------")
     return continuar_problemas()
 
 
 def p_trepidando():
     print("-----------------------------------------------")
     print("Se o carro estiver trepidando, verifique as rodas quanto a danos ou desequilíbrio.\nSe necessário, ajuste a pressão dos pneus.\nSe o problema persistir, pode ser necessário verificar os freios ou a suspensão com um mecânico.")
-    print("-----------------------------------------------")
+    print("--------------------------------------------------")
     return continuar_problemas()
 
 
 def p_pneu():
     print("-----------------------------------------------")
     print("Se tiver um pneu furado, estacione em local seguro.\nTroque o pneu utilizando o macaco e a chave de roda, ou chame um serviço de assistência para trocar o pneu por você.")
-    print("-----------------------------------------------")
+    print("--------------------------------------------------")
     return continuar_problemas()
 
 
 def p_dentada():
     print("-----------------------------------------------")
     print("Se a correia dentada quebrar, pare o carro imediatamente para evitar danos ao motor.\nChame um serviço de reboque para levar o veículo a uma oficina mecânica para substituir a correia e verificar se há danos adicionais no motor.")
-    print("-----------------------------------------------")
+    print("--------------------------------------------------")
     return continuar_problemas()
 
 
 def p_cambio():
     print("-----------------------------------------------")
     print("Se enfrentar problemas de câmbio, estacione com segurança.\nVerifique o nível de fluido de transmissão e procure sinais de vazamento.\nSe persistir, consulte um mecânico qualificado para diagnosticar e reparar o câmbio.")
-    print("-----------------------------------------------")
+    print("--------------------------------------------------")
     return continuar_problemas()
 
 
@@ -165,7 +171,7 @@ def sair():
 
 
 def invalido():
-    print("Opção Inválida, digite um dos números do Menu.")
+    print("Opção Inválida, digite um dos valores dentro dos () do Menu.")
     print("Aperte <ENTER> para continuar")
     input()
 
@@ -196,7 +202,7 @@ def funcao_menu_problemas():
         elif problema == "V":
             break
         else:
-            print("Valor inválido, por favor digitar o que está entre ().")
+            invalido()
 
 
 def listar_usu(lista_usuario):
